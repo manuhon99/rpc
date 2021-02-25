@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/router'
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 
@@ -14,7 +13,10 @@ export default function Home( {tvShowsList} ) {
     
     {tvShowsList.map((show) => (
       <div key={show.midia_id}>
-        <p>{show.title}</p>
+        <p>Título{show.title}</p>
+        <p>Descrição {show.description}</p>
+        <p>Duração em minutos {show.duration_in_minutes}</p>
+        <img src={show.custom_info.Graficos.PosterURL}/>
       </div>
     ))}
   </div>
@@ -22,14 +24,17 @@ export default function Home( {tvShowsList} ) {
 }
 
 export async function getStaticProps({ params }) {
-    console.log({params})
-    const res = await fetch(`https://epg-api.video.globo.com/programmes/1337/?day=${params}`);
+    //console.log(`${params.query_id}`)
+    const res = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${params.query_id}`);
     const guide = await res.json();
-    //console.log(guide.programme.entries.slice(0, 10))
+    const teste = guide.programme.entries.sort(function (a,b) {
+      return a.start_time-b.start_time
+    })
+    //console.log(teste)
   
     return {
       props: {
-        tvShowsList: guide.programme.entries
+        tvShowsList: teste
       }
     };
 }
@@ -43,7 +48,7 @@ export async function getStaticPaths() {
     return {
       paths: query.map((query_id)=> ({
         params: {
-          query_id: query_id.day.toString(),
+          query_id: query_id.day,
         }
       })),
     fallback:false,
