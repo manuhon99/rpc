@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-
+import { Shows } from './components/Shows';
 
 
 export default function Home() {
@@ -19,17 +19,7 @@ export default function Home() {
       <Link href="/states">
         <a>Check show</a>
       </Link>
-      <h1>EPG</h1>
-      
-      {query.map((query_id) => (
-          <li>
-            <Link href={`/day/${query_id}`}>
-              <a>
-                oi
-              </a>
-            </Link>
-          </li>
-      ))}
+      <Shows></Shows>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useContext } from 'react';
-
+import { Shows} from '../components/Shows';
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import moment from 'moment'
@@ -16,6 +15,7 @@ export default function Home( {tvShowsList}) {
       <title>RPC</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <Shows></Shows>
     <h1>EPG</h1>
     
     {tvShowsList.map((dia) => (
@@ -29,7 +29,7 @@ export default function Home( {tvShowsList}) {
 
         <div key={show.midia_id}>
           {<h1>{now}</h1>}
-         {(show.start_time < now) && (show.end_time > now) ? <h1>{show.end_time}</h1>:<h1>nao</h1>}  
+         {(show.start_time < now) && (show.end_time > now) ? <h1>agora</h1>:<h1>nao</h1>}  
           <p>Título{show.title}</p>
           <p>Título{show.start_time}</p>
           <p>Título{show.end_time}</p>
@@ -61,15 +61,24 @@ export async function getStaticProps({ params }) {
   const date = new Date(); 
   const today = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
   const yesterday = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)-86400000).toISOString().split('T')[0];
+  const beforeYesterday = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)-86400000*2).toISOString().split('T')[0];
   const tomorrow = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)+86400000).toISOString().split('T')[0];
-  //console.log(`${today}`)
+  const afterTomorrow = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)+86400000*2).toISOString().split('T')[0];
+  
+  console.log(`${beforeYesterday}`)
+  
   const res = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${yesterday}`);
   const res2 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${today}`);
   const res3 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${tomorrow}`);
+  const res4 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${beforeYesterday}`);
+  //const res5 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${afterTomorrow}`);
+
   const guide = await res.json();
   const guide2 = await res2.json();
   const guide3 = await res3.json();
-  //console.log({guide3})
+  const guide4 = await res4.json();
+  //const guide5 = await res5.json();
+
   const teste = guide.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
@@ -79,9 +88,19 @@ export async function getStaticProps({ params }) {
   const teste3 = guide3.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
+  const teste4 = guide4.programme.entries.sort(function (a,b) {
+    return a.start_time-b.start_time
+  })
+  
+  //const teste5 = guide5.programme.entries.sort(function (a,b) {
+ //   return a.start_time-b.start_time
+ // })
+  
 
-  const filter = [teste, teste2, teste3]
+  const filter = [teste4, teste, teste2, teste3]
   const filterByDate = []
+
+
 
   {filter.map((filtered) => {
     {filtered.map((time) => {
@@ -93,19 +112,13 @@ export async function getStaticProps({ params }) {
     })
     }
   })}
-  
-  //console.log([teste,teste2,teste3])
-  const orderByDate = filterByDate.sort(function (a,b) {
-    return a.start_time-b.start_time
-  })
-
 
   return {
     props: {
       tvShowsList: filterByDate
     }
-  };
-}
+    };
+  }
 
 export async function getStaticPaths() {
   const date = new Date(); 
