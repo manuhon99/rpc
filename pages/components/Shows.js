@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from '../../styles/components/Shows.module.css';
 
-export function Shows() {
+export default function Shows() {
     var date = new Date(); 
     var today = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
     var yesterday = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)-86400000).toISOString().split('T')[0];
