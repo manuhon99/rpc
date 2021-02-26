@@ -42,21 +42,21 @@
 }
 
 .containerDescription{
-	max-width: 38rem;
-	position: fixed;
+	width: 60rem;
+	position: relative;
 	display: grid;
-  grid-template-columns: 10% 20% 70%;
+  grid-template-columns: 9% 20% 50% 8% 8%;
   background: var(--gray-card-program);
   border-radius: 10px;
   position: relative;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
   margin: 42px 1rem;
   padding: 2px 24px;
   font-size: .9rem;
   font-family: Roboto;
   font-weight: 500;
-  color: var(--black-text);
+  color: var(--gray-text);
   border: none;
 }
 
@@ -67,25 +67,64 @@
 	align-items: center;
 	text-align: center;
 	color: var(--black-text-high);
+	margin: 0 -1.5rem;
+
+}
+
+.description{
+	justify-content: center;
+	align-items: center;
+	margin-right: 3rem;
+	margin-left: -5rem;
+}
+
+.classi{
+	display: flex;
+	margin-right: 2rem;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.year{
+	margin-right: -2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.isShowing{
+	margin-left: 5rem;
+	width: 10rem;
+}
+
+.image{
+	margin-right: -5rem;
 }
 
 
-
-.containerNow{
-	background: darkgreen;
+.isShowing{
+	margin-left: 24rem;
+	width: 10rem;	
 }
 
+.containerNow p{
+	justify-content: start;
+	align-items: center;
+	text-align: center;
+}
 
 
 @media screen and (max-width: 720px) {
   .container{
     max-width: 410px;
-
   }
 	.data{
 		margin-top: 5rem; 
 		margin-left: 4rem;
 		max-width: 220px;
+
 	}
   .containerContent{
     margin: -2rem -12rem;
@@ -121,10 +160,35 @@
 		border: none;
 	}
 
+	.title{
+		margin: 0 0rem;
+	
+	}
+	
+	.description{
+		margin-right: 0rem;
+		margin-left: 0rem;
+	}
+
 	.image{
 		display: none;
 	}
 
+	.isShowing{
+		display: inline-block;
+		margin-left: 5rem;
+		height: 2rem;	
+	}
+	
+.classi{
+	display: none;
+
+}
+
+.year{
+	display: none;
+
+}
  
 }
     

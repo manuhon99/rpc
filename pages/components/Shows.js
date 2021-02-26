@@ -12,7 +12,7 @@ export function Shows() {
         <div className={styles.navbar}>
           <div className={styles.navMenu}>
             <Link href={`/`}>
-            <a><img src="/icons/globo.png" style={{maxWidth:"48px"}} alt="logo globo"/></a>
+            <a><img src="/icons/globo.png" className={styles.logo} style={{maxWidth:"48px"}} alt="logo globo"/></a>
             </Link>
             <ul className={styles.navList}>
               <div className={styles.home}>

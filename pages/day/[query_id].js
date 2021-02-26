@@ -29,27 +29,34 @@ export default function Teste( {tvShowsList}) {
                 <div className={styles.containerDescription}>
                   <img src={show.custom_info.Graficos.LogoURL} className={styles.image} style={{maxWidth: "36px"}}/>
                   <p className={styles.title}>{show.title}</p>
-                  <p >{show.description}</p>
-                </div>
-                </section>
+                  <p className={styles.description}>{show.description}</p>
+                  <p className={styles.classi}>Classificação Indicativa: {show.custom_info.Classificacao.Idade}</p>
+                  <p className={styles.year}>Ano: {show.custom_info.Ano}</p>
 
-
-                <div className={styles.containerNow}>
-                {(show.start_time < now) && (show.end_time > now) ?  
-                  <div>
+                  <div className={styles.containerNow}>
+                  {(show.start_time < now) && (show.end_time > now) ?  
+                  <div className={styles.isShowing}>
                     <img src={show.custom_info.Graficos.PosterURL}/>
-                    <p>{show.duration_in_minutes}</p>
+                    <p style={{color: "var(--blue-logo)", marginTop:"-.5rem"}} >AGORA</p>
+                    <p style={{color: "var(--blue-logo)", marginBottom:".5rem"}} >Duração total: {show.duration_in_minutes}min</p>
                   </div>
                   :
                   <div></div>
                 }
                 </div>  
+                </div>
+
+                </section>
               </div> 
+              
               
               
             ))}
           </div>
           ))}
+
+
+          
           </section>
         </div>
     );
