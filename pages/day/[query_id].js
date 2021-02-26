@@ -1,43 +1,58 @@
 import React from 'react';
-import { Shows} from '../components/Shows';
+import {Shows} from '../components/Shows';
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
-import moment from 'moment'
+import moment from 'moment';
+import styles from "../../styles/components/Content.module.css";
 
-export default function Home( {tvShowsList}) {
+export default function Teste( {tvShowsList}) {
   const now = moment().unix();
     return (
-    <div className={styles.container}>
-    <Head>
-      <title>RPC</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Shows></Shows>
-    
-    {tvShowsList.map((dia) => (
-      
-    <div>
-      <h1>EPG3</h1>
-    
-      {dia.map((show) => (
-      
-        <div key={show.midia_id}>
-          {<h1>{now}</h1>}
-         {(show.start_time < now) && (show.end_time > now) ? <h1>agora</h1>:<h1>nao</h1>}  
-          <p>{show.title}</p>
-          <p>{show.start_time}</p>
-          <p>{show.end_time}</p>
-          <p>{show.description}</p>
-          <p>{show.duration_in_minutes}</p>
-          <img src={show.custom_info.Graficos.PosterURL}/>
+      <div className={styles.container}>
+        <Head>
+          <title>Programação RPC</title>
+          <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+          <link rel="icon" href="/fav.ico" />
+        </Head>
+        
+        <Shows></Shows>
+        <section className={styles.data}>
+          {tvShowsList.map((dia) => (
+          <div className={styles.containerContent}>
+            {dia.map((show) => (        
+              <div key={show.midia_id}>
+                <section className={styles.dateInfo}>
+                <div className={styles.containerHour}>
+                  <p>{show.human_start_time.split('', 5)}</p>
+                  <p>{show.human_end_time.split('', 5)}</p>
+                </div>  
+
+                <div className={styles.containerDescription}>
+                  <img src={show.custom_info.Graficos.LogoURL} className={styles.image} style={{maxWidth: "36px"}}/>
+                  <p className={styles.title}>{show.title}</p>
+                  <p >{show.description}</p>
+                </div>
+                </section>
+
+
+                <div className={styles.containerNow}>
+                {(show.start_time < now) && (show.end_time > now) ?  
+                  <div>
+                    <img src={show.custom_info.Graficos.PosterURL}/>
+                    <p>{show.duration_in_minutes}</p>
+                  </div>
+                  :
+                  <div></div>
+                }
+                </div>  
+              </div> 
+              
+              
+            ))}
+          </div>
+          ))}
+          </section>
         </div>
-      ))}
-    </div>
-    ))}
-    
-  
-  </div>
-  );
+    );
 }
 
 export async function getStaticProps({ params }) {

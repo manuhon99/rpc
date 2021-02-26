@@ -56,6 +56,13 @@
   color: var(--gray-text-button);
   border: none;
   line-height: 1.4;
+  transition: .2s;
+}
+
+.button:hover{
+  background: var(--gray-card-program);
+  padding: 0px 26px;
+  color: var(--blue-logo);
 }
 
 .name{
