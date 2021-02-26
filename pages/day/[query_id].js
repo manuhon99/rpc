@@ -7,8 +7,6 @@ import moment from 'moment'
 export default function Home( {tvShowsList}) {
 
   const now = moment().unix();
-
-
     return (
     <div className={styles.container}>
     <Head>
@@ -16,25 +14,22 @@ export default function Home( {tvShowsList}) {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Shows></Shows>
-    <h1>EPG</h1>
     
     {tvShowsList.map((dia) => (
       
     <div>
       <h1>EPG3</h1>
-     
-
+    
       {dia.map((show) => (
-       
-
+      
         <div key={show.midia_id}>
           {<h1>{now}</h1>}
          {(show.start_time < now) && (show.end_time > now) ? <h1>agora</h1>:<h1>nao</h1>}  
-          <p>Título{show.title}</p>
-          <p>Título{show.start_time}</p>
-          <p>Título{show.end_time}</p>
-          <p>Descrição {show.description}</p>
-          <p>Duração em minutos {show.duration_in_minutes}</p>
+          <p>{show.title}</p>
+          <p>{show.start_time}</p>
+          <p>{show.end_time}</p>
+          <p>{show.description}</p>
+          <p>{show.duration_in_minutes}</p>
           <img src={show.custom_info.Graficos.PosterURL}/>
         </div>
       ))}
@@ -45,8 +40,6 @@ export default function Home( {tvShowsList}) {
   </div>
   );
 }
-
-
 
 export async function getStaticProps({ params }) {
 
