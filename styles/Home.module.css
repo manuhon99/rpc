@@ -7,22 +7,17 @@
   flex-direction: column;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 .logoContainer{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 520px;
-  height: 280px;
-  margin-left: 5rem;
-
+  position: relative;
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: 140px;
   background: var(--white-logo);
   border-radius: 34px;
 }
@@ -32,3 +27,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 720px) {
+  .container{
+    max-width: 410px;
+  }
+  .logoContainer{
+    margin-top: 75%;
+  }
+}
+

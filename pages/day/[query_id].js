@@ -5,7 +5,6 @@ import styles from "../../styles/Home.module.css";
 import moment from 'moment'
 
 export default function Home( {tvShowsList}) {
-
   const now = moment().unix();
     return (
     <div className={styles.container}>
@@ -64,20 +63,24 @@ export async function getStaticProps({ params }) {
   const res2 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${today}`);
   const res3 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${tomorrow}`);
   const res4 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${beforeYesterday}`);
-  //const res5 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${afterTomorrow}`);
+  const res5 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${afterTomorrow}`);
 
   const guide = await res.json();
   const guide2 = await res2.json();
+  /*
   const guide3 = await res3.json();
   const guide4 = await res4.json();
-  //const guide5 = await res5.json();
+  const guide5 = await res5.json();
 
   const teste = guide.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
+  */
   const teste2 = guide2.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
+
+  /*
   const teste3 = guide3.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
@@ -85,12 +88,13 @@ export async function getStaticProps({ params }) {
     return a.start_time-b.start_time
   })
   
-  //const teste5 = guide5.programme.entries.sort(function (a,b) {
- //   return a.start_time-b.start_time
- // })
-  
+  const teste5 = guide5.programme.entries.sort(function (a,b) {
+    return a.start_time-b.start_time
+  })
+  */
 
-  const filter = [teste4, teste, teste2, teste3]
+  //const filter = [teste4, teste, teste2, teste3, teste5]
+  const filter = [teste2]
   const filterByDate = []
 
 

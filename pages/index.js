@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>RPC</title>
+        <title>Programação RPC</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="icon" href="/fav.ico" />
       </Head>
 
@@ -16,7 +17,7 @@ export default function Home() {
  
       <div className={styles.logoContainer}>
         <div className={styles.logo}>
-          <img src="icons/rpc.png" alt="logo rpc"/>
+          <img src="icons/rpc.png"  style={{maxWidth:"220px"}} alt="logo rpc"/>
         </div>
       </div>
     </div>
