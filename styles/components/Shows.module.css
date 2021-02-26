@@ -103,3 +103,16 @@
 }
     
 
+@media screen and (max-width: 400px) {
+  .userOption{
+    display: grid;
+    margin-top: -1rem;
+    grid-template-columns: 33% 33% 33%;
+    margin-left: -1rem;
+  }
+  .button{
+    margin: 42px 1rem;
+  }
+}
+    
+

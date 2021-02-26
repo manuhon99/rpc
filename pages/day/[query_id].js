@@ -20,7 +20,7 @@ export default function Teste( {tvShowsList}) {
           <div className={styles.containerContent}>
             {dia.map((show) => (        
               <div key={show.midia_id}>
-                <section className={styles.dateInfo}>
+                <section className={styles.dataInfo}>
                 <div className={styles.containerHour}>
                   <p>{new Date(parseInt(show.start_time-86400, 10)*1000).toLocaleString('pt-br',{hour:'2-digit', minute:'2-digit'})}</p>
                   <p>{new Date(parseInt(show.end_time-86400, 10)*1000).toLocaleString('pt-br',{hour:'2-digit', minute:'2-digit'})}</p>

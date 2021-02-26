@@ -16,7 +16,7 @@
 	display: flex;
 }
 
-.dateInfo{
+.dataInfo{
 	display: flex;
 	margin-bottom: -4.5rem;
 	
@@ -130,7 +130,7 @@
     margin: -2rem -12rem;
 		display: block;
   }
-  .dateInfo{
+  .dataInfo{
     display: flex;
     max-width: 420px;
     margin-left: 5rem;
@@ -138,58 +138,68 @@
 
   }
 	
-	.containerHour{
-		max-width: 4rem;
-		max-height: 3rem;
-		background: var(--gray-card-program);
-		margin: 42px 1rem;
-		padding: .5rem 1rem;
-		font-size: .8rem;
-	}
+  .containerHour{
+  	max-width: 4rem;
+  	max-height: 3rem;
+  	background: var(--gray-card-program);
+  	margin: 42px 1rem;
+  	padding: .5rem 1rem;
+  	font-size: .8rem;
+  }  
+  .containerDescription{
+  	max-width: 30rem;
+  	display: grid;
+  	grid-template-columns: 20% 70%;
+  	justify-content: space-around;
+  	align-items: center;
+  	margin: 38px 1rem;
+  	padding: 2px 7px;
+  	font-size: .8rem;
+  	color: var(--black-text);
+  	border: none;
+  }  
+  .title{
+  	margin: 0 0rem;
+  
+  }
+  
+  .description{
+  	margin-right: 0rem;
+  	margin-left: 0rem;
+  }  
+  .image{
+  	display: none;
+  }  
+  .isShowing{
+  	display: inline-block;
+  	margin-left: 5rem;
+  	height: 2rem;	
+  }
+  
+  .classi{
+  	display: none;  
+  }  
+  .year{
+  	display: none;  
+  }
+}
+  
 
-	.containerDescription{
-		max-width: 30rem;
-		display: grid;
-		grid-template-columns: 20% 70%;
-		justify-content: space-around;
-		align-items: center;
-		margin: 38px 1rem;
-		padding: 2px 7px;
-		font-size: .8rem;
-		color: var(--black-text);
-		border: none;
-	}
-
-	.title{
-		margin: 0 0rem;
-	
-	}
-	
-	.description{
-		margin-right: 0rem;
-		margin-left: 0rem;
-	}
-
-	.image{
-		display: none;
-	}
-
-	.isShowing{
-		display: inline-block;
+@media screen and (max-width: 400px) {
+	.data{
+		margin-top: 5rem; 
 		margin-left: 5rem;
-		height: 2rem;	
+		max-width: 100px;
 	}
-	
-.classi{
-	display: none;
+
+	.dataInfo{
+		margin-left: 2rem;
+		margin-top: 0.5rem;
+	}
+
+	.containerHour{
+		margin-left: 4rem;
+		margin-right: -.1rem;
+	}  
 
 }
-
-.year{
-	display: none;
-
-}
- 
-}
-    
-
