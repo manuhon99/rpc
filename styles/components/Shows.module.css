@@ -103,7 +103,7 @@
 }
     
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 370px) {
   .userOption{
     display: grid;
     margin-top: -1rem;
