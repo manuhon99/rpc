@@ -81,14 +81,13 @@ export async function getStaticProps({ params }) {
   
   const res = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${yesterday}`);
   const res2 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${today}`);
-  const res3 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=2020-03-01`);
+  const res3 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${tomorrow}`);
   const res4 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${beforeYesterday}`);
   const res5 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${afterTomorrow}`);
 
   const guide = await res.json();
   const guide2 = await res2.json();
   const guide3 = await res3.json()
-    
   const guide4 = await res4.json();
   const guide5 = await res5.json();
 
