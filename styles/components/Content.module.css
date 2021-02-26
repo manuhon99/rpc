@@ -173,7 +173,7 @@
   .isShowing{
   	display: inline-block;
   	margin-left: 5rem;
-  	height: 2rem;	
+  	height: 3rem;	
   }
   
   .classi{
@@ -196,10 +196,23 @@
 		margin-left: 2rem;
 		margin-top: 0.5rem;
 	}
+	.containerDescription{
+		width: 19rem;
+		margin: 42px 1rem;
+	}
+
+	.description{
+		width: 12rem;
+		margin-left: 1rem;
+	}
 
 	.containerHour{
 		margin-left: 4rem;
 		margin-right: -.1rem;
 	}  
+	.isShowing{
+  	display: inline-block;
+  	margin-left: 4rem;
+  }
 
 }
