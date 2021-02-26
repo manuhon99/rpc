@@ -22,8 +22,8 @@ export default function Teste( {tvShowsList}) {
               <div key={show.midia_id}>
                 <section className={styles.dateInfo}>
                 <div className={styles.containerHour}>
-                  <p>{show.human_start_time.split('', 5)}</p>
-                  <p>{show.human_end_time.split('', 5)}</p>
+                  <p>{new Date(parseInt(show.start_time-86400, 10)*1000).toLocaleString('pt-br',{hour:'2-digit', minute:'2-digit'})}</p>
+                  <p>{new Date(parseInt(show.end_time-86400, 10)*1000).toLocaleString('pt-br',{hour:'2-digit', minute:'2-digit'})}</p>
                 </div>  
 
                 <div className={styles.containerDescription}>
@@ -37,7 +37,7 @@ export default function Teste( {tvShowsList}) {
                   {(show.start_time < now) && (show.end_time > now) ?  
                   <div className={styles.isShowing}>
                     <img src={show.custom_info.Graficos.PosterURL}/>
-                    <p style={{color: "var(--blue-logo)", marginTop:"-.5rem"}} >AGORA</p>
+                    <p style={{color: "var(--blue-logo)", marginTop:"-.5rem"}} >NO AR</p>
                     <p style={{color: "var(--blue-logo)", marginBottom:".5rem"}} >Duração total: {show.duration_in_minutes}min</p>
                   </div>
                   :
@@ -66,11 +66,11 @@ export async function getStaticProps({ params }) {
 
   const date1 = params.query_id
   const timestampStart = new Date(date1).valueOf()/1000;
-  console.log(timestampStart-1614297599)
-  console.log(timestampStart-1614222000)
+  //console.log(timestampStart-1614297599)
+  //console.log(timestampStart-1614222000)
   const timestampEnd = timestampStart+86399
-  console.log(timestampStart)
-  console.log(timestampEnd)
+  //console.log(timestampStart)
+  //console.log(timestampEnd)
 
   const date = new Date(); 
   const today = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
@@ -79,30 +79,26 @@ export async function getStaticProps({ params }) {
   const tomorrow = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)+86400000).toISOString().split('T')[0];
   const afterTomorrow = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)+86400000*2).toISOString().split('T')[0];
   
-  console.log(`${beforeYesterday}`)
-  
   const res = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${yesterday}`);
   const res2 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${today}`);
-  const res3 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${tomorrow}`);
+  const res3 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=2020-03-01`);
   const res4 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${beforeYesterday}`);
   const res5 = await fetch(`https://epg-api.video.globo.com/programmes/1337/?date=${afterTomorrow}`);
 
   const guide = await res.json();
   const guide2 = await res2.json();
-  /*
-  const guide3 = await res3.json();
+  const guide3 = await res3.json()
+    
   const guide4 = await res4.json();
   const guide5 = await res5.json();
 
   const teste = guide.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
-  */
   const teste2 = guide2.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
 
-  /*
   const teste3 = guide3.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
@@ -113,10 +109,8 @@ export async function getStaticProps({ params }) {
   const teste5 = guide5.programme.entries.sort(function (a,b) {
     return a.start_time-b.start_time
   })
-  */
 
-  //const filter = [teste4, teste, teste2, teste3, teste5]
-  const filter = [teste2]
+  const filter = [teste4, teste, teste2, teste3, teste5]
   const filterByDate = []
 
 
@@ -126,7 +120,6 @@ export async function getStaticProps({ params }) {
       if (time.start_time > timestampStart+10800 && time.end_time < timestampEnd+10800){
         filterByDate.push([time])
         console.log(time.start_time)
-
       }
     })
     }
