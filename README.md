@@ -12,8 +12,7 @@
  <a href="#-layout">Layout</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-contribuidores">Contribuidores</a> • 
- <a href="#-autor">Autor</a> • 
+ <a href="#-autora">Autora</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
 
@@ -77,8 +76,7 @@ Utilizou-se as seguintes ferramentas para desenvolvimento do projeto:
 
 ---
 
-## Autora
-<p>Emanueli Santos da Silva<p>
+## :superhero_woman: Autora
 <br/> [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=lhttps://www.linkedin.com/in/emanueli-santos-da-silva-66a76525/)](https://www.linkedin.com/in/emanueli-santos-da-silva-66a76525/) [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:emanuelissilva@hotmail.com )](mailto:emanuelissilva@hotmail.com )
 
 ---
