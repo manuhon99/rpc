@@ -13,6 +13,7 @@
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
  <a href="#-layout">Layout</a> • 
+ <a href="#-como-acessar-o-projeto">Como acessar</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-autora">Autora</a> • 
@@ -43,7 +44,7 @@ O layout da aplicação está disponível no Figma:
 
 ---
 
-## :runner: Acesso
+## :runner: Como acessar
 
 ### Você pode acessar o projeto publicado na [Vercel](https://rpc-manuhon99.vercel.app/)
 
