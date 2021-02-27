@@ -7,50 +7,50 @@
 }
 
 .data{
-	margin-top: 4.2rem; 
-	max-width: 1080px;
+  margin-top: 4.2rem; 
+  max-width: 1080px;
 }
 
 .containerContent{
-	margin: 2rem -14rem;
-	display: flex;
+  margin: 2rem -14rem;
+  display: flex;
 }
 
 .dataInfo{
-	display: flex;
-	margin-bottom: -4.5rem;
+  display: flex;
+  margin-bottom: -4.5rem;
 	
 }
 
 .containerHour{
   max-width: 8rem;
   max-height: 3.8rem;
-	display: inline-block;
+  display: inline-block;
   background: var(--gray-card-program);
   border-radius: 10px;
   position: relative;
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 42px 1rem;
   padding: 0.5rem 1.5rem;
   font-size: .9rem;
   font-family: Roboto;
   font-weight: 500;
-	text-align: center;
+  text-align: center;
   color: var(--black-text);
   border: none;
 }
 
 .containerDescription{
-	width: 60rem;
-	position: relative;
-	display: grid;
+  width: 60rem;
+  position: relative;
+  display: grid;
   grid-template-columns: 9% 20% 50% 8% 8%;
   background: var(--gray-card-program);
   border-radius: 10px;
   position: relative;
-	justify-content: space-between;
-	align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 42px 1rem;
   padding: 2px 24px;
   font-size: .9rem;
@@ -61,58 +61,62 @@
 }
 
 .title{
-	max-width: 6rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	color: var(--black-text-high);
-	margin: 0 -1.5rem;
-
+  max-width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--black-text-high);
+  margin: 0 -1.5rem;
 }
 
 .description{
-	justify-content: center;
-	align-items: center;
-	margin-right: 3rem;
-	margin-left: -5rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+  margin-left: -5rem;
 }
 
 .classi{
-	display: flex;
-	margin-right: 2rem;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  margin-right: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .year{
-	margin-right: -2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+  margin-right: -2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .isShowing{
-	margin-left: 5rem;
-	width: 10rem;
+  margin-left: 5rem;
+  width: 10rem;
 }
 
 .image{
-	margin-right: -5rem;
+  margin-right: -5rem;
 }
 
 
 .isShowing{
-	margin-left: 24rem;
-	width: 10rem;	
+  margin-left: 24rem;
+  width: 10rem;	
+}
+
+.isShowing img{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .containerNow p{
-	justify-content: start;
-	align-items: center;
-	text-align: center;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
 }
 
 
@@ -121,14 +125,13 @@
     max-width: 410px;
   }
 	.data{
-		margin-top: 5rem; 
-		margin-left: 4rem;
-		max-width: 220px;
-
+	  margin-top: 5rem; 
+	  margin-left: 4rem;
+	  max-width: 220px;
 	}
   .containerContent{
     margin: -2rem -12rem;
-		display: block;
+	display: block;
   }
   .dataInfo{
     display: flex;
@@ -182,16 +185,20 @@
   .year{
   	display: none;  
   }
+
+	.isShowing img{
+		margin-left: -.5rem;
+	}
+
 }
   
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 398px) {
 	.data{
 		margin-top: 5rem; 
 		margin-left: 5rem;
 		max-width: 100px;
 	}
-
 	.dataInfo{
 		margin-left: 2rem;
 		margin-top: 0.5rem;
@@ -200,19 +207,22 @@
 		width: 19rem;
 		margin: 42px 1rem;
 	}
-
 	.description{
 		width: 12rem;
 		margin-left: 1rem;
 	}
-
 	.containerHour{
 		margin-left: 4rem;
 		margin-right: -.1rem;
 	}  
 	.isShowing{
-  	display: inline-block;
-  	margin-left: 4rem;
-  }
+		display: inline-block;
+		margin-left: 4rem;
+	}
+
+	.isShowing img{
+		margin-left: -1rem;
+	}
+
 
 }

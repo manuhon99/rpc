@@ -65,6 +65,13 @@
   color: var(--blue-logo);
 }
 
+.button:focus{
+  background: var(--blue-logo);
+  color: var(--gray-card-program);
+  box-shadow: none;
+  outline: none;
+}
+
 .name{
   margin-left: 16rem;
   margin-top: 0rem;
@@ -103,7 +110,7 @@
 }
     
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 398px) {
   .userOption{
     display: grid;
     margin-top: -1rem;

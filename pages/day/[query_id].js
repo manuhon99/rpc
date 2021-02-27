@@ -41,7 +41,7 @@ export default function tvShows({tvShowsList}) {
                   <div className={styles.containerNow}>
                   {(show.start_time < now) && (show.end_time > now) ?  
                   <div className={styles.isShowing}>
-                    <img src={show.custom_info.Graficos.PosterURL}/>
+                    <img src={show.custom_info.Graficos.PosterURL} style={{width: "160px"}}/>
                     <p style={{color: "var(--blue-logo)", marginTop:"-.5rem"}} >NO AR</p>
                     <p style={{color: "var(--blue-logo)", marginBottom:".5rem"}} >Duração total: {show.duration_in_minutes}min</p>
                   </div>
@@ -117,7 +117,6 @@ export async function getStaticProps({ params }) {
     {filtered.map((time) => {
       if (time.start_time > timestampStart+10800 && time.end_time < timestampEnd+10800){
         filterByDate.push([time])
-        console.log(time.start_time)
       }
     })}
   })}

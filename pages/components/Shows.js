@@ -27,19 +27,22 @@ export function Shows() {
           </ul>
         </div>
       </div>
+
       <ul className={styles.userOption}>
       {/* Map para percorrer o array com as 3 opções de datas */}
-      {query.map((query_id) => (
-        <button className={styles.button}>
-          <Link href={`/day/${query_id.date}`}>
+      {query.map((query_id, i) => (
+        <Link href={`/day/${query_id.date}`}>
+        <button className={styles.button} key={i}>
+          
             <a>
               {query_id.id}
               <br/>
               {/* Data no formato DIA-MÊS */}
               {`${query_id.date.split('-',3).reverse()}`.split(',',2).join().replace(',','-')}
             </a>
-          </Link>
+          
         </button>
+        </Link>
       ))}
       </ul> 
     </div>
