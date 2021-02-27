@@ -1,0 +1,49 @@
+.container {
+  height: 100vh;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.error{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: 140px;
+  border-radius: 34px;
+  font-size: .9rem;
+  font-family: Mukta;
+  font-weight: 500;
+  color: var(--gray-text-button);
+  text-align: center;
+}
+
+.gif{
+  width:240px
+}
+
+@media screen and (max-width: 720px) {
+  .container{
+    max-width: 410px;
+    
+  }
+  
+  .error{
+    margin-top: 15rem;
+    margin-left: 1rem;
+    font-size: .8rem;
+  }
+
+  .gif{
+    width:180px
+  }
+      
+}
