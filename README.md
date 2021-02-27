@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img alt="GitHub language count" src="https://github.com/manuhon99/rpc/blob/main/public/icons/rpc.png" style="width:248px">
+</p>
 
-## Getting Started
+<h4 align="center"> 
+	🚧  Programação da RPC - Concluído 🚧
+</h4>
 
-First, run the development server:
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-layout">Layout</a> • 
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-contribuidores">Contribuidores</a> • 
+ <a href="#-autor">Autor</a> • 
+ <a href="#user-content--licença">Licença</a>
+</p>
+
+
+## 💻 Sobre o projeto
+
+Aplicação web para visualização da grade programação da RPC, filiada da Rede Globo.
+
+---
+
+## ⚙️ Funcionalidades
+
+- [x] Exibir a grade de programação do dia, disposta de 00:00 até 23:59;
+- [x] Destacar qual o programa esta sendo exibido no momento de acesso a aplicação;
+
+---
+
+## 🎨 Layout
+
+O layout da aplicação está disponível no Figma:
+
+<a href="https://www.figma.com/file/WIoFVqOBF8yZCT8UrIXjLw/RPC?node-id=1%3A11">
+  <img src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361" style="width:48px">
+</a>
+
+---
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+Antes de começar, você precisa instalar o [Git](https://git-scm.com) e o [Node.js](https://nodejs.org/en/). 
 
 ```bash
-npm run dev
-# or
-yarn dev
+
+# Clone este repositório
+$ git clone https://github.com/manuhon99/rpc.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd rpc
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# O servidor inciará na porta:3000 - acesse http://localhost:3000
 ```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tecnologias
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Utilizou-se as seguintes ferramentas para desenvolvimento do projeto:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [NextJS](https://nextjs.org/)
+- [Figma](https://www.figma.com/)
+- [Rede Globo EPG API](https://epg-api.video.globo.com/programmes/{ID_EMISSORA}?date={ANO-MES-DIA})
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Postman](https://www.postman.com/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
+## Autora
+<p>Emanueli Santos da Silva<p>
+<br/> [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=lhttps://www.linkedin.com/in/emanueli-santos-da-silva-66a76525/)](https://www.linkedin.com/in/emanueli-santos-da-silva-66a76525/) [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:emanuelissilva@hotmail.com )](mailto:emanuelissilva@hotmail.com )
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Licença
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Este projeto esta sobe a licença [MIT](./LICENSE).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
