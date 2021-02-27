@@ -48,6 +48,7 @@ O layout da aplicação está disponível no Figma:
 
 ### Você pode acessar o projeto publicado na [Vercel](https://rpc-manuhon99.vercel.app/)
 
+---
 
 ## 🚀 Como executar o projeto
 
@@ -71,6 +72,7 @@ $ npm run dev
 
 # O servidor inciará na porta:3000 - acesse http://localhost:3000
 ```
+
 ---
 
 ## 🛠 Tecnologias
