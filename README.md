@@ -3,7 +3,10 @@
 </p>
 
 <h4 align="center"> 
-	🚧  Programação da RPC - Concluído 🚧
+	Grade de programação da RPC 
+</h4>
+<h4 align="center"> 
+	🚧  Status: Concluído 
 </h4>
 
 <p align="center">
@@ -39,6 +42,11 @@ O layout da aplicação está disponível no Figma:
 </a>
 
 ---
+
+## :runner: Acesso
+
+### Você pode acessar o projeto publicado na [Vercel](https://rpc-manuhon99.vercel.app/)
+
 
 ## 🚀 Como executar o projeto
 
