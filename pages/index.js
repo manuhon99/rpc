@@ -2,17 +2,17 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Shows } from './components/Shows';
 
-
+//Geração da página principal, reutilizando o componente Shows
 export default function Home() {
   return (
     <div className={styles.container}>
+
       <Head>
         <title>Programação RPC</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="icon" href="/fav.ico" />
       </Head>
 
-      
       <Shows></Shows>
  
       <div className={styles.logoContainer}>
