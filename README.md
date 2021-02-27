@@ -46,7 +46,7 @@ O layout da aplicação está disponível no Figma:
 
 ## :runner: Como acessar
 
-### Você pode acessar o projeto publicado na [Vercel](https://rpc-manuhon99.vercel.app/)
+### Você pode acessar o projeto hospedado na [Vercel](https://rpc-manuhon99.vercel.app/)
 
 ---
 
