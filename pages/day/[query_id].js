@@ -142,7 +142,7 @@ export async function getStaticPaths() {
         query_id: query_id.day,
       }
     })),
-  fallback:false,
+  fallback:true,
   }
 }
 
