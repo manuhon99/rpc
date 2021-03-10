@@ -124,7 +124,8 @@ export async function getStaticProps({ params }) {
   //Retorna a pogramação do dia escolhido
   return {
     props: {
-      tvShowsList: filterByDate
+      tvShowsList: filterByDate,
+      revalidate: 1
     }
   };
 }
@@ -142,7 +143,7 @@ export async function getStaticPaths() {
         query_id: query_id.day,
       }
     })),
-  fallback:true,
+  fallback:false,
   }
 }
 
