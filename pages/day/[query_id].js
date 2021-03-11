@@ -125,7 +125,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       tvShowsList: filterByDate,
-      revalidate: 1
+      revalidate: 10
     }
   };
 }
