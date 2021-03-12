@@ -125,7 +125,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       tvShowsList: filterByDate,
-      revalidate: 1,
+      revalidate: 60,
     }
   };
 }
@@ -143,7 +143,7 @@ export async function getStaticPaths() {
         query_id: query_id.day,
       }
     })),
-  fallback:true,
+  fallback:false,
   }
 }
 
