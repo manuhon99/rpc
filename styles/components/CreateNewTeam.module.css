@@ -1,0 +1,54 @@
+.createContainer{
+  background: var(--background-card);
+  width: 60rem;
+  height: 25rem;
+  margin: 2rem auto;
+}
+.createTopBar{
+  margin-left: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: small;
+  color: var(--text-my-teams);
+}
+.titleArea{
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: .5rem;
+  color: var(--text-create-title);
+}
+.teamInformationContainer{
+  display: flex;
+  justify-content: space-around;
+}
+.left{
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+.right{
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.configureSquadContainer{
+  display: flex;
+  justify-content: space-around;
+}
+.formation{
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+.players{
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}

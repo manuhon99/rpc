@@ -1,51 +1,27 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 
 :root{
-  --white-logo: #FFFEFF;
-  --background: linear-gradient(158.98deg, #3A3C43 10.51%, #272A31 86.12%);
-  --gray-text-nav: #B5B6B8;
-  --gray-text-button: #767676;
-  --gray-text: #5e5e5e;
-  --gray-button: #EEEEED;
-  --blue-logo: #01639A;
-  --blue-logo-dark: #064c75;
-  --gray-card-program: #F7F7F5;
-  --black-text: #272A31;
-  --black-text-high: #131518;
-  --text-highlight: #B3B9FF;
-
-}
-
-@media(max-width: 1080px){
-  html{
-    font-size: 93.75%;
-  }
-}
-
-@media(max-width: 720px){
-  html{
-    font-size: 87.5%;
-  }
+  --background: #F7F3F7;
+  --text-white: #FDF6F9;
+  --background-footer: #E9E3E9;
+  --backgrond-pick: linear-gradient(180deg, #B73D7C 0%, #943781 48.96%, #6D3187 100%);
+  --background-navbar: linear-gradient(90deg, #C00F4F 1.79%, #BC1052 1.79%, #A5175F 49.56%, #8B206F 98.17%);
+  --background-card: #FFFFFF;
+  --background-button: linear-gradient(180deg, #A3387B 0%, #94367E 53.12%, #853481 100%);
+  --button-shadow: 0px 8px 18px 2px #FFC2F5;
+  --text-my-teams: #552C8A;
+  --text-list: #333333;
+  --text-create-title: #8E8E8E;
 }
 
 body{
   background: var(--background);
-
 }
 
 body, input, textarea, button{
   font: 400 16px "Inter", sans-serif;
-}
-
-button{
-  cursor: pointer;
-}
-
-a{
-  color: inherit;
-  text-decoration: none;
 }

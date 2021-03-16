@@ -1,39 +1,107 @@
 .container {
-  height: 100vh;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
   display: flex;
-  flex-direction: column;
-}
-
-.logoContainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  position: relative;
-  margin-top: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 320px;
-  height: 140px;
-  background: var(--white-logo);
-  border-radius: 34px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  
 }
 
-.logo{
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+.myTeamCard{
+  background: var(--background-card);
+  justify-content: center;
+  width: 29rem;
+  height: 31rem;
+  border-radius: 9px;
+  margin-left: 1rem;
 }
 
-@media screen and (max-width: 720px) {
-  .container{
-    max-width: 410px;
-  }
-  .logoContainer{
-    margin-top: 75%;
-  }
+.myTeamTopBar{
+  margin-left: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: small;
+  color: var(--text-my-teams);
 }
+
+.myTeamCardButton{
+  margin-right: 2rem;
+  background: var(--background-button);
+
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: var(--background-card);
+  border: none;
+}
+
+.myTeamlist{
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: small;
+  color: var(--text-list);
+
+}
+
+.topContainer{
+  margin-left: -1rem;
+}
+
+
+.average{
+  background: var(--background-card);
+  border-radius: 9px;
+  height: 16rem;
+  width: 29rem;
+}
+
+
+.myTopBar{
+  margin-top: 2rem;
+  padding-left: 2rem;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: small;
+  color: var(--text-my-teams);
+}
+
+.myToplist{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: small;
+  color: var(--text-list);
+}
+
+
+.pick{
+  background: var(--backgrond-pick);
+  border-radius: 9px;
+  display: flex;
+  height: 12rem;
+  width: 29rem;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: .5rem;
+  color: var(--background-card);
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
 

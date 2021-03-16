@@ -1,0 +1,116 @@
+Squad Management Tool will be splitted into 3 phases.
+
+
+
+Phase 1
+
+1. Implement Page Layout.
+
+       1.1Create placeholders for non implemented features.
+
+2. Implement "My teams" section.
+
+       2.1 There is no need to implement Share action
+
+       2.2 User must be able to sort by name and description.
+
+3. Ability to Create/Edit and Remove a team.
+
+       3.1Team information section only.
+
+             3.1.1 All fields but description and tags are mandatory.
+
+             3.1.2 Default value is empty for all fields.
+
+             3.1.3 Team website must validate site URL.
+
+             3.1.4 You must highlight fields/labels whenever user tries to create/update a team with invalid information.
+
+3.1.5    Current UI is displaying Team name as an example of an invalid field.
+
+3.1.6    For tags field user must be able to enter a free text and tag will be created as soon as the user hits enter or semicolon.
+
+4.Ability to see what player was the most/less picked on.
+
+4.1 Replace images by player initials.
+
+
+
+Phase 2
+
+1. Ability to search for a player name and see the list of players who matched the criteria.
+
+2. Ability to add a player to a field position through drag n drop.
+
+·         Once a player was added to the team, it should be disabled on search result list.
+
+·         Whenever a user is added to a position, it's initials must be displayed. i.e. Cristiano Ronaldo (CR) / Zinedine Yazid Zidane (ZZ)
+
+3. Save must store the team's players into application state.
+
+
+
+Phase 3
+
+1. Implement "Top 5" section to the dashboard.
+
+1.1 Whenever user clicks on a given team, it should open team configuration page.
+
+2. Ability to configure and display a given formation from the list (Soccer field must display the positions accordingly). Options:
+
+3 - 2 - 2 - 3
+3 - 2 - 3 - 1
+3 - 4 - 3
+3 - 5 - 2
+4 - 2 - 3 - 1
+4 - 3 - 1 - 1
+4 - 3 - 2
+4 - 4 - 2
+4 - 5 - 1
+5 - 4 -1
+** Whenever a formation is changed all current players must be removed.
+
+3. Ability to see player information on hover (soccer field
+
+
+
+Your assignment:
+
+1. You are supposed to implement all Phases.
+
+2. You are allowed to use any library you want.
+
+3. Your application must strictly follow the design specification.
+
+4. Your design must be responsive.
+
+5. You must write tests.
+
+6. You can use the demo API from https://www.api-football.com/ or you can create your own server... It's up to you!
+
+7. Your must write a README.md file with all steps required to develop, test and deploy your code – make it simple.
+
+
+
+Rules:
+
+1. You have 1 week to complete this test.
+
+2. You can develop this web application using any framework of your choice (AngularJS, Angular, Vue, React, Etc.) Or do it manually (using Vanilla Javascript). You're allowed to use jQuery.
+
+            2.1. You're allowed to use any component library (e.g. Bootstrap) but we'd like to see your own approach on CSS.
+
+3. As soon as you finish your test you must generate a git tag named venturus-1.0.0.This tag must be generated before the end date of the test and will be used to evaluate your test.
+
+4. When you are done, create a public repository on Github and submit the code for evaluation.
+
+How we will evaluate your test:
+
+    We are going to evaluate the way you think, how you communicate your ideas and how you develop them. If there is no time to implement everything, it is just fine! Don’t worry. We will see:
+
+1. How did you solve this problem? What services and libraries did you use and why?
+
+2. How you prioritize your activities – the main goal is to have all Phases implemented. In case you cannot implement all phases, make sure you are selecting the most relevant ones and make sure to consider future requirements.
+
+
+3. How you code looks like regarding organization and documentation.
